@@ -38,21 +38,7 @@ class GEONODES_PT_attribute_renamer(Panel):
         if not scene.attr_renamer_old_name or not scene.attr_renamer_new_name:
             row.enabled = False
         
-        # Info text
-        layout.separator()
-        box = layout.box()
-        box.label(text="Renames attribute references in:", icon='INFO')
-        box.label(text="• All selected mesh objects")
-        box.label(text="• All geometry node modifiers")
-        box.label(text="• All nested node groups recursively")
-        box.label(text="• Currently active node tree (if any)")
         
-        # Usage instruction
-        layout.separator()
-        info_box = layout.box()
-        info_box.label(text="Usage:", icon='QUESTION')
-        info_box.label(text="Select objects with Geometry Nodes")
-        info_box.label(text="modifiers, then click Rename")
 
 classes = [
     GEONODES_PT_attribute_renamer,
