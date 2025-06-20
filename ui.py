@@ -42,11 +42,17 @@ class GEONODES_PT_attribute_renamer(Panel):
         layout.separator()
         box = layout.box()
         box.label(text="Renames attribute references in:", icon='INFO')
-        box.label(text="• Named Attribute nodes")
-        box.label(text="• Store Named Attribute nodes") 
-        box.label(text="• Remove Attribute nodes")
-        box.label(text="• String inputs with attribute names")
+        box.label(text="• All selected mesh objects")
+        box.label(text="• All geometry node modifiers")
         box.label(text="• All nested node groups recursively")
+        box.label(text="• Currently active node tree (if any)")
+        
+        # Usage instruction
+        layout.separator()
+        info_box = layout.box()
+        info_box.label(text="Usage:", icon='QUESTION')
+        info_box.label(text="Select objects with Geometry Nodes")
+        info_box.label(text="modifiers, then click Rename")
 
 classes = [
     GEONODES_PT_attribute_renamer,
